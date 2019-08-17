@@ -5,6 +5,7 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 Assets/NatureStarterKit2*
+Assets/Textures/Adem Textures*
 
 # Visual Studio cache directory
 .vs/
@@ -35,3 +36,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Prefabs/Adam.FBX
