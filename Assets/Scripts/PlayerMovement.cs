@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     float speed;                                           // The current speed of the player
     Vector3 keyboardInput;                                 // The movemnet inputs from the keyboard (set direction to move)
     Rigidbody playerRb;                                    // rigid body of the player
-    [SerializeField] bool grounded = true;                 // checking if player on the ground
+    [HideInInspector] public bool grounded = true;                 // checking if player on the ground
     
     void Start()
     {
