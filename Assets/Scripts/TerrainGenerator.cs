@@ -42,7 +42,7 @@ public class TerrainGenerator : MonoBehaviour
         {
             for (int y = 0; y < hight; y++)
             {
-                hights[x, y] = CalculatingHight(x, y);
+                hights[x, y] = CalculatingHight(x, y) *0.1f;
             }
         }
         return hights;

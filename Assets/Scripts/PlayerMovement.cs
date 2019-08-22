@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 keyboardInput;                                 // The movemnet inputs from the keyboard (set direction to move)
     Rigidbody playerRb;                                    // rigid body of the player
     [HideInInspector] public bool grounded = true;                 // checking if player on the ground
-    
+
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         //Moving player
-        playerRb.velocity = (keyboardInput * speed) + (new Vector3(0, playerRb.velocity.y, 0));
+        playerRb.velocity = (keyboardInput.normalized * speed) + (new Vector3(0, playerRb.velocity.y, 0));
 
         //Performing jump if player on the ground
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
