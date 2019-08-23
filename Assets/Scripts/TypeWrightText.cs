@@ -9,9 +9,12 @@ public class TypeWrightText : MonoBehaviour
     [SerializeField] [Range(0, 1)] float typeSpeed;               // The speed at which the text will be displayed letter by letter
     Text text;                                                    // The text component in the pannel
     int dialogIndex;                                              // Keeping track of which dialog is being displayed
+    PlayerMovement stopPlayerMove;
 
     void Start()
     {
+        stopPlayerMove = FindObjectOfType<PlayerMovement>();
+        stopPlayerMove.moveState = PlayerMovement.movementState.talking;   // setting player to talking state
         dialogIndex = 0;
         text = GetComponent<Text>();
         StartCoroutine(TypeWriteEffect());                        // Displaying the first dialog when the pannel appears
@@ -26,7 +29,10 @@ public class TypeWrightText : MonoBehaviour
             dialogIndex++;
             // If the last dialog was displayed then turn off the pannal else move to displaying the next dialog
             if (dialogIndex >= myDialogs.Length)
+            {
                 transform.parent.gameObject.SetActive(false);
+                stopPlayerMove.moveState = PlayerMovement.movementState.moving;  //setting player back to moveable state
+            }
             else
                 StartCoroutine(TypeWriteEffect());
         }
