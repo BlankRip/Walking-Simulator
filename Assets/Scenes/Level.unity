@@ -2030,6 +2030,7 @@ MonoBehaviour:
   - hi
   - akdfh;iangoi
   - king kong on the fly
+  typeSpeed: 0.07
 --- !u!114 &1350441577
 MonoBehaviour:
   m_ObjectHideFlags: 0
