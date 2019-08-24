@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAnimationController : MonoBehaviour
 {
     Animator animate;
-    float speedValue;
+    bool jumpin;
     void Start()
     {
         animate = GetComponent<Animator>();
@@ -14,6 +14,12 @@ public class PlayerAnimationController : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Space) && jumpin)
+        {
+            animate.SetTrigger("Jump");
+        }
+
+
         if (Input.GetAxis("Horizontal") != 0)
         {
             animate.SetFloat("Move", 1);
@@ -34,7 +40,24 @@ public class PlayerAnimationController : MonoBehaviour
                 animate.SetFloat("Front and back", -1);
         }
 
-        if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
+        if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0 && !jumpin)
             animate.SetFloat("Move", 0);
+    }
+
+
+    //Checking if colling with ground to set grounded
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            jumpin = false;
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            jumpin = true;
+        }
     }
 }

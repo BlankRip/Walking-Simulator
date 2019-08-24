@@ -5,7 +5,8 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 Assets/NatureStarterKit2*
-Assets/Textures/Adem Textures*
+Assets/Textures*
+Assets/ProCore*
 
 # Visual Studio cache directory
 .vs/
