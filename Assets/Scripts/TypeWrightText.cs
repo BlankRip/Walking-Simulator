@@ -9,6 +9,9 @@ public class TypeWrightText : MonoBehaviour
     [SerializeField] [Range(0, 1)] float typeSpeed;               // The speed at which the text will be displayed letter by letter
     Text text;                                                    // The text component in the pannel
     int dialogIndex;                                              // Keeping track of which dialog is being displayed
+    [SerializeField] bool replayable;                             // Make it true if the conversation is replayable
+    int replayTimes;                                              // The number of times replayed
+    bool reset;                                                   // check if replayed then reset all the values
     PlayerMovement stopPlayerMove;
 
     void Start()
@@ -26,10 +29,24 @@ public class TypeWrightText : MonoBehaviour
         // If E is pressed then moving to diplay the next dialogue
         if(Input.GetKeyDown(KeyCode.E))
         {
+            // Check if the conversation is being replayed if so set start values
+            if (reset && replayTimes > 0)
+            {
+                Start();
+                reset = false;
+            }
+
             dialogIndex++;
             // If the last dialog was displayed then turn off the pannal else move to displaying the next dialog
             if (dialogIndex >= myDialogs.Length)
             {
+                // If replayable setting the stuff for when the conversation is replayed
+                if(replayable)
+                {
+                    reset = true;
+                    text.text = myDialogs[0];
+                    replayTimes++;
+                }
                 transform.parent.gameObject.SetActive(false);
                 stopPlayerMove.moveState = PlayerMovement.movementState.moving;  //setting player back to moveable state
             }
