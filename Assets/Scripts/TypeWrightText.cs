@@ -16,6 +16,7 @@ public class TypeWrightText : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("<color = red>dick </color>");
         stopPlayerMove = FindObjectOfType<PlayerMovement>();
         stopPlayerMove.moveState = PlayerMovement.movementState.talking;   // setting player to talking state
         dialogIndex = 0;
@@ -26,25 +27,25 @@ public class TypeWrightText : MonoBehaviour
 
     void Update()
     {
-        // If E is pressed then moving to diplay the next dialogue
-        if(Input.GetKeyDown(KeyCode.E))
+        // Check if the conversation is being replayed if so set start values
+        if (reset && replayTimes > 0)
         {
-            // Check if the conversation is being replayed if so set start values
-            if (reset && replayTimes > 0)
-            {
-                Start();
-                reset = false;
-            }
+            Start();
+            reset = false;
+        }
+
+        // If E is pressed then moving to diplay the next dialogue
+        if (Input.GetKeyDown(KeyCode.E))
+        {
 
             dialogIndex++;
             // If the last dialog was displayed then turn off the pannal else move to displaying the next dialog
             if (dialogIndex >= myDialogs.Length)
             {
                 // If replayable setting the stuff for when the conversation is replayed
-                if(replayable)
+                if (replayable)
                 {
                     reset = true;
-                    text.text = myDialogs[0];
                     replayTimes++;
                 }
                 transform.parent.gameObject.SetActive(false);

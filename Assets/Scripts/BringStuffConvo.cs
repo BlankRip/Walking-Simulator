@@ -5,6 +5,7 @@ using UnityEngine;
 public class BringStuffConvo : MonoBehaviour
 {
     [SerializeField] GameObject bringMeStuff;
+    [SerializeField] GameObject enterIn;
     [HideInInspector] public bool collectableNow;
     [HideInInspector] public int collected;
     [SerializeField] int ColletXNumber;
@@ -19,7 +20,10 @@ public class BringStuffConvo : MonoBehaviour
                 bringMeStuff.SetActive(true);
             }
             else if (collected >= ColletXNumber)
+            {
+                enterIn.SetActive(true);
                 Destroy(gameObject);
+            }
         }
     }
 }
