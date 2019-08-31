@@ -1538,7 +1538,7 @@ Transform:
   - {fileID: 1078278648}
   - {fileID: 2076832466}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &326494882
 PrefabInstance:
@@ -1585,7 +1585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f12f2d44b2688054986e54861cc211dc, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f12f2d44b2688054986e54861cc211dc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2151,11 +2151,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myDialogs:
-  - bring
-  - me
-  - '5 '
-  - bushes
-  - bitch
+  - Hi there young man, I know you have questions.
+  - Bring me 5 pink bushes and I shall let you in.
+  - I will take you to a place where everything will be answered.
   typeSpeed: 0.07
   replayable: 1
 --- !u!114 &410095496
@@ -4181,12 +4179,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myDialogs:
-  - well now great
-  - come inside
-  - follow me i will take you to the room of heven
-  - Then you can get back to your world,
-  - 'you need to answer me '
-  - only then i will help you if worthy
+  - Well I see you carry 5 pink bushes now.
+  - Hand them over and follow me.
+  - Give me the correct answere to my questions and all shall go as planned.
+  - Now now, I am not really fast so don't run around.
   typeSpeed: 0.07
   replayable: 0
 --- !u!114 &742801819
@@ -4466,7 +4462,7 @@ Transform:
   m_LocalScale: {x: 3.9607773, y: 4.0898676, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &754329036
 Rigidbody:
@@ -4577,7 +4573,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &777093951
 PrefabInstance:
@@ -5044,7 +5040,7 @@ Transform:
   - {fileID: 2021234503}
   - {fileID: 1260984691}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &888320595
 PrefabInstance:
@@ -5264,10 +5260,10 @@ RectTransform:
   m_Children:
   - {fileID: 1250394993}
   - {fileID: 1095156323}
-  - {fileID: 2008941043}
   - {fileID: 1249724096}
+  - {fileID: 2008941043}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6632,7 +6628,7 @@ RectTransform:
   m_Children:
   - {fileID: 742801817}
   m_Father: {fileID: 933177483}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.017645888, y: 0.052444432}
   m_AnchorMax: {x: 0.975, y: 0.27555555}
@@ -6869,7 +6865,7 @@ Transform:
   m_LocalScale: {x: 118.20216, y: 0.19239, z: 122.63}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1274921890
 PrefabInstance:
@@ -7279,9 +7275,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myDialogs:
-  - hi
-  - akdfh;iangoi
-  - king kong on the fly
+  - (Arrrrrrr.........)
+  - (Where am I at, Last thing i remember is drinking at the at the bar)
+  - (I guess I should go around and figure out where I am at)
   typeSpeed: 0.07
   replayable: 0
 --- !u!114 &1350441577
@@ -9520,7 +9516,7 @@ Transform:
   - {fileID: 39291407}
   - {fileID: 869478761}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1829721444 stripped
 Transform:
@@ -9857,6 +9853,42 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1868157561}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1874339081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 5c169fbbb6cc2b2419af46dcf364f517,
+    type: 3}
+  m_PrefabInstance: {fileID: 2052257700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1874339082
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874339081}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4123006
+  m_Height: 1.8942963
+  m_Direction: 1
+  m_Center: {x: -0.004533291, y: 0.92688435, z: -0.022575378}
+--- !u!54 &1874339085
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874339081}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!4 &1879798095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c24559634a7c3084ab1129880c447f7b,
@@ -10263,7 +10295,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1983830581
 MonoBehaviour:
@@ -10513,7 +10545,7 @@ RectTransform:
   m_Children:
   - {fileID: 1129057533}
   m_Father: {fileID: 933177483}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10951,6 +10983,67 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2051545820}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2052257700
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 5c169fbbb6cc2b2419af46dcf364f517, type: 3}
+      propertyPath: m_Name
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5c169fbbb6cc2b2419af46dcf364f517, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.389
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5c169fbbb6cc2b2419af46dcf364f517, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.266
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5c169fbbb6cc2b2419af46dcf364f517, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 38.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5c169fbbb6cc2b2419af46dcf364f517, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5c169fbbb6cc2b2419af46dcf364f517, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5c169fbbb6cc2b2419af46dcf364f517, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5c169fbbb6cc2b2419af46dcf364f517, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5c169fbbb6cc2b2419af46dcf364f517, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5c169fbbb6cc2b2419af46dcf364f517, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5c169fbbb6cc2b2419af46dcf364f517, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5c169fbbb6cc2b2419af46dcf364f517, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 5c169fbbb6cc2b2419af46dcf364f517, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bdeae43eba4dcf8418fdbdeefe402d35, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5c169fbbb6cc2b2419af46dcf364f517, type: 3}
 --- !u!1001 &2053878125
 PrefabInstance:
   m_ObjectHideFlags: 0
