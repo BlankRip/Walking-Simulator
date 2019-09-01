@@ -24,5 +24,10 @@ public class NPCQuestion : MonoBehaviour
             theScript.animate.SetBool("WalkingNow", false);
             theScript.currentState = NPCScript.NPCStates.Questioning;
         }
+        else if (other.tag == "LastPoint")
+        {
+            theScript.animate.SetBool("WalkingNow", false);
+            theScript.currentState = NPCScript.NPCStates.Beatup;
+        }
     }
 }

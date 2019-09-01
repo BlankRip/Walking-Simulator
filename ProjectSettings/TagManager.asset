@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - NextPoint
   - QuestionPoint
+  - LastPoint
   layers:
   - Default
   - TransparentFX

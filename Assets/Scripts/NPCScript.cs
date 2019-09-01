@@ -13,6 +13,7 @@ public class NPCScript : MonoBehaviour
     [SerializeField] GameObject question2;
     [SerializeField] GameObject question3;
     [SerializeField] GameObject player;
+    [SerializeField] SphereCollider Tcollider;
     [HideInInspector] public int questionNo;
     [HideInInspector] public int index = 0;                                   // which waypoint it is at or moving to right now
 
@@ -21,6 +22,7 @@ public class NPCScript : MonoBehaviour
     {
         currentState = NPCStates.OutRange;
         questionNo = 1;
+        Tcollider = GetComponent<SphereCollider>();
     }
 
 
@@ -51,6 +53,10 @@ public class NPCScript : MonoBehaviour
                 }
                 break;
             case NPCStates.Beatup:
+                {
+                    Tcollider.enabled = false;
+                    transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
+                }
                 break;
             default:
                 break;
