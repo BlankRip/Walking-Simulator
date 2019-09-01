@@ -7,14 +7,14 @@ public class NPCScript : MonoBehaviour
     public enum NPCStates { InRange, OutRange, Questioning, Beatup}
     public NPCStates currentState;
 
-    [SerializeField] Animator animate;
-    [SerializeField] GameObject[] wayPoints;
+    [SerializeField] public Animator animate;
+    [SerializeField] public GameObject[] wayPoints;
     [SerializeField] GameObject question1;
     [SerializeField] GameObject question2;
     [SerializeField] GameObject question3;
     [SerializeField] GameObject player;
     [HideInInspector] public int questionNo;
-    int index = 0;                                   // which waypoint it is at or moving to right now
+    [HideInInspector] public int index = 0;                                   // which waypoint it is at or moving to right now
 
 
     private void Start()
@@ -63,17 +63,6 @@ public class NPCScript : MonoBehaviour
         if(other.tag == "Player")
         {
             currentState = NPCStates.InRange;
-        }
-
-        if(other.tag == "NextPoint")
-        {
-            if(index <= wayPoints.Length - 1)
-                index++;
-        }
-        else if(other.tag =="QuestionPoint")
-        {
-            animate.SetBool("WalkingNow", false);
-            currentState = NPCStates.Questioning;
         }
     }
 

@@ -16,7 +16,6 @@ public class TypeWrightText : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("<color = red>dick </color>");
         stopPlayerMove = FindObjectOfType<PlayerMovement>();
         stopPlayerMove.moveState = PlayerMovement.movementState.talking;   // setting player to talking state
         dialogIndex = 0;

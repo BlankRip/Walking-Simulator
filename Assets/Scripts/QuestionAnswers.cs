@@ -27,6 +27,7 @@ public class QuestionAnswers : MonoBehaviour
             {
                 npcNowPos.currentState = NPCScript.NPCStates.InRange;
                 npcNowPos.questionNo++;
+                npcNowPos.index++;
                 correct.SetActive(true);
                 gameObject.SetActive(false);
             }
@@ -41,6 +42,7 @@ public class QuestionAnswers : MonoBehaviour
             {
                 npcNowPos.currentState = NPCScript.NPCStates.InRange;
                 npcNowPos.questionNo++;
+                npcNowPos.index++;
                 correct.SetActive(true);
                 gameObject.SetActive(false);
             }
@@ -55,6 +57,7 @@ public class QuestionAnswers : MonoBehaviour
             {
                 npcNowPos.currentState = NPCScript.NPCStates.InRange;
                 npcNowPos.questionNo++;
+                npcNowPos.index++;
                 correct.SetActive(true);
                 gameObject.SetActive(false);
             }
