@@ -13,13 +13,14 @@ public class NPCScript : MonoBehaviour
     [SerializeField] GameObject question2;
     [SerializeField] GameObject question3;
     [SerializeField] GameObject player;
-    public int questionNo = 1;
+    [HideInInspector] public int questionNo;
     int index = 0;                                   // which waypoint it is at or moving to right now
 
 
     private void Start()
     {
         currentState = NPCStates.OutRange;
+        questionNo = 1;
     }
 
 
