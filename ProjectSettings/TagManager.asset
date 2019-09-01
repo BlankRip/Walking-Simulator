@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - NextPoint
+  - QuestionPoint
+  - LastPoint
   layers:
   - Default
   - TransparentFX
@@ -21,8 +24,8 @@ TagManager:
   - Ground
   - AccessibleVolume
   - PostProcessing
-  - 
-  - 
+  - Waypoints
+  - Collider
   - 
   - 
   - 
