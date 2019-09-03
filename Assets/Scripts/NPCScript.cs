@@ -13,9 +13,11 @@ public class NPCScript : MonoBehaviour
     [SerializeField] GameObject question2;
     [SerializeField] GameObject question3;
     [SerializeField] GameObject player;
+    [SerializeField] GameObject finalPuzzleInstruct;
     [SerializeField] SphereCollider Tcollider;
     [HideInInspector] public int questionNo;
     [HideInInspector] public int index = 0;                                   // which waypoint it is at or moving to right now
+    [HideInInspector] public bool finalPuzzleOn;
 
 
     private void Start()
@@ -54,7 +56,12 @@ public class NPCScript : MonoBehaviour
                 break;
             case NPCStates.Beatup:
                 {
-                    Tcollider.enabled = false;
+                    if(Tcollider.enabled == true)
+                    {
+                        Tcollider.enabled = false;
+                        finalPuzzleOn = true;
+                        finalPuzzleInstruct.SetActive(true);
+                    }
                     transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
                 }
                 break;
