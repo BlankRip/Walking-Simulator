@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
 {
-    Animator animate;
-    bool jumpin;
+    Animator animate;                    // The player animator
+    bool jumpin;                         // To check if player is in jumping state
+
     void Start()
     {
         animate = GetComponent<Animator>();
@@ -14,6 +15,7 @@ public class PlayerAnimationController : MonoBehaviour
 
     void Update()
     {
+        // Setting the animation state based on which key is pressed
         if(Input.GetKeyDown(KeyCode.Space) && jumpin)
         {
             animate.SetTrigger("Jump");
