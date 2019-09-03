@@ -36,7 +36,7 @@ public class TypeWrightText : MonoBehaviour
         // If E is pressed then moving to diplay the next dialogue
         if (Input.GetKeyDown(KeyCode.E))
         {
-
+            StopAllCoroutines();
             dialogIndex++;
             // If the last dialog was displayed then turn off the pannal else move to displaying the next dialog
             if (dialogIndex >= myDialogs.Length)
