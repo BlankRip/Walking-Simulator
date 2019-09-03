@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SkullScript : MonoBehaviour
 {
     [SerializeField] GameObject touchSkullInstruct;
+    [SerializeField] GameObject tbcPannal;
 
     [HideInInspector] public bool leftLit;
     [HideInInspector] public bool rightLit;
@@ -15,7 +17,8 @@ public class SkullScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && inrange)
         {
-
+            tbcPannal.SetActive(true);
+            StartCoroutine(backToMenu());
         }
     }
 
@@ -35,5 +38,12 @@ public class SkullScript : MonoBehaviour
             inrange = false;
             touchSkullInstruct.SetActive(false);
         }
+    }
+
+
+    IEnumerator backToMenu()
+    {
+        yield return new WaitForSeconds(3.5f);
+        SceneManager.LoadScene(0);
     }
 }

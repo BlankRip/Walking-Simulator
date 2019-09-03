@@ -32,6 +32,7 @@ public class TorchScript : MonoBehaviour
                 vFx.SetActive(true);
                 skull.leftLit = true;
                 triggerCollider.enabled = false;
+                LitUpInstructions.SetActive(false);
             }
         }
         else if(thisIsRigthStick)
@@ -43,6 +44,7 @@ public class TorchScript : MonoBehaviour
                     vFx.SetActive(true);
                     skull.rightLit = true;
                     triggerCollider.enabled = false;
+                    LitUpInstructions.SetActive(false);
                 }
                 else
                     wrongLitText.SetActive(true);
