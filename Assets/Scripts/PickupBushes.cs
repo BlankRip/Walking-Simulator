@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PickupBushes : MonoBehaviour
 {
-    [SerializeField] GameObject pickUpInstructions;
-    bool readyToTake;
-    BringStuffConvo tracker;
+    [SerializeField] GameObject pickUpInstructions;         // Panal which displays the instructions to pick up the bush when in range
+    bool readyToTake;                                       // to check if the bush is in range
+    BringStuffConvo tracker;                                // The script that tracks the number of bushes being collected
 
 
     private void Start()
@@ -16,6 +16,7 @@ public class PickupBushes : MonoBehaviour
 
     private void Update()
     {
+        // If the player is in collection range and presses E he will collect the bush 
         if(Input.GetKeyDown(KeyCode.E) && readyToTake)
         {
             tracker.collected++;
@@ -24,6 +25,7 @@ public class PickupBushes : MonoBehaviour
         }
     }
 
+    // To check if the player is in the trigger collider then set to inrange
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player" && tracker.collectableNow)
@@ -33,6 +35,7 @@ public class PickupBushes : MonoBehaviour
         }
     }
 
+    // To check if the player is outside the trigger collider that is set to out of range
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player" && tracker.collectableNow)

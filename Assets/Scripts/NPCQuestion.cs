@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class NPCQuestion : MonoBehaviour
 {
-    NPCScript theScript;
+    NPCScript theScript;                     // The NPC script to check the waypoints
 
-    // Start is called before the first frame update
     void Start()
     {
         theScript = FindObjectOfType<NPCScript>();
@@ -14,20 +13,21 @@ public class NPCQuestion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // What the player should do when the NPC gets to a waypoint
         if (other.tag == "NextPoint")
         {
             if (theScript.index <= theScript.wayPoints.Length - 2)
-                theScript.index++;
+                theScript.index++;                                         // Adding one to the index so that the npc will move to the next way point
         }
         else if (other.tag == "QuestionPoint")
         {
-            theScript.animate.SetBool("WalkingNow", false);
-            theScript.currentState = NPCScript.NPCStates.Questioning;
+            theScript.animate.SetBool("WalkingNow", false);               // Making the npc to stop walking animation
+            theScript.currentState = NPCScript.NPCStates.Questioning;     // Make the NPC ask the Question if on that perticular waypoint
         }
         else if (other.tag == "LastPoint")
         {
-            theScript.animate.SetBool("WalkingNow", false);
-            theScript.currentState = NPCScript.NPCStates.Beatup;
+            theScript.animate.SetBool("WalkingNow", false);               // Making the npc to stop walking animation
+            theScript.currentState = NPCScript.NPCStates.Beatup;          // Setting the NPC to the the final puzzle activating state when on the perticular waypoint
         }
     }
 }
