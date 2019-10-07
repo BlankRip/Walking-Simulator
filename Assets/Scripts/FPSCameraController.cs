@@ -10,6 +10,10 @@ public class FPSCameraController : MonoBehaviour
     [SerializeField] float mouseYMin;              // Minimum of Y axis clipping
     [SerializeField] float mouseYMax;              //Maximum of Y axis clipping
 
+    private void Start()
+    {
+        Cursor.visible = false;
+    }
 
     void LateUpdate()
     {

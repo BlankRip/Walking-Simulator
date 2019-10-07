@@ -10,6 +10,8 @@ public class TorchScript : MonoBehaviour
     [SerializeField] GameObject LitUpInstructions;                    // Panal to show instrctions to lite the torch
     [SerializeField] GameObject wrongLitText;                         // Text panal that will show up when tried to light up the wrong torch
     [SerializeField] CapsuleCollider triggerCollider;                 // The isTrigger collider to check if in range
+    [SerializeField] AudioSource soundEffectSource;                   // The required audio source
+    [SerializeField] AudioClip lightSE;                               // The clip to play when lit
     [SerializeField] bool thisIsLeftStick;                            // Tick this bool if the torch is the one on the left stick
     [SerializeField] bool thisIsRigthStick;                           // Tick this bool if the torch is the one on the right stick
     bool inrange;                                                     // To check if the player is in range to light up the torch
@@ -29,6 +31,7 @@ public class TorchScript : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E) && inrange)
             {
+                soundEffectSource.PlayOneShot(lightSE);
                 vFx.SetActive(true);
                 skull.leftLit = true;
                 triggerCollider.enabled = false;
@@ -43,6 +46,7 @@ public class TorchScript : MonoBehaviour
             {
                 if (skull.leftLit)
                 {
+                    soundEffectSource.PlayOneShot(lightSE);
                     vFx.SetActive(true);
                     skull.rightLit = true;
                     triggerCollider.enabled = false;

@@ -7,6 +7,8 @@ public class SkullScript : MonoBehaviour
 {
     [SerializeField] GameObject touchSkullInstruct;          // The panal to display when playe in range to touch the skull
     [SerializeField] GameObject tbcPannal;                   // The panal to display the to be continued bevoer moving to the main menu
+    [SerializeField] AudioSource soundEffectSource;          // The required audio source
+    [SerializeField] AudioClip smacked;                      // The clip to be played
 
     [HideInInspector] public bool leftLit;                   // To check if the left torch is lit
     [HideInInspector] public bool rightLit;                  // To check if the right torch is lit
@@ -18,8 +20,9 @@ public class SkullScript : MonoBehaviour
         // If the player is in range and E is pressed the player will be hit and to be continued will be displayed
         if (Input.GetKeyDown(KeyCode.E) && inrange)
         {
+            soundEffectSource.PlayOneShot(smacked);
             tbcPannal.SetActive(true);
-            StartCoroutine(backToMenu());
+            StartCoroutine(BackToMenu());
         }
     }
 
@@ -44,9 +47,10 @@ public class SkullScript : MonoBehaviour
     }
 
     // IEnumerator to wait and move to main menu
-    IEnumerator backToMenu()
+    IEnumerator BackToMenu()
     {
         yield return new WaitForSeconds(3.5f);
+        Cursor.visible = true;
         SceneManager.LoadScene(0);
     }
 }

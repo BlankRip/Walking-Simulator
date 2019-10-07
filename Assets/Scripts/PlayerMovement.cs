@@ -8,9 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public movementState moveState;
 
 
-    [SerializeField] float normalSpeed;                    // The normal speed the player will move in the game
+    public float normalSpeed;                    // The normal speed the player will move in the game
     [SerializeField] float sprintMultipler;                // The number multiplied to normal speed to give sprint speed
-    [SerializeField] int jumpForce;                        // The velocity increase in Y axis to perform jump
+    [SerializeField] float jumpForce;                        // The velocity increase in Y axis to perform jump
     float sprintSpeed;                                     // The speed at which player sprints in the game
     float speed;                                           // The current speed of the player
     Vector3 keyboardInput;                                 // The movemnet inputs from the keyboard (set direction to move)
