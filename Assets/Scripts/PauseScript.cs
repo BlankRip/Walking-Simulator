@@ -23,6 +23,7 @@ public class PauseScript : MonoBehaviour
             {
                 pauseScreen.SetActive(false);
                 Time.timeScale = 1;
+                Cursor.visible = false;
                 paused = false;
             }
 

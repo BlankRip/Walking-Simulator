@@ -7,6 +7,8 @@ public class PickupBushes : MonoBehaviour
     [SerializeField] GameObject pickUpInstructions;         // Panal which displays the instructions to pick up the bush when in range
     bool readyToTake;                                       // to check if the bush is in range
     BringStuffConvo tracker;                                // The script that tracks the number of bushes being collected
+    [SerializeField] AudioSource soundEffect;               // The audio source
+    [SerializeField] AudioClip pickUpSe;                    // The clip played when picked up
 
 
     private void Start()
@@ -19,6 +21,7 @@ public class PickupBushes : MonoBehaviour
         // If the player is in collection range and presses E he will collect the bush 
         if(Input.GetKeyDown(KeyCode.E) && readyToTake)
         {
+            soundEffect.PlayOneShot(pickUpSe);
             tracker.collected++;
             pickUpInstructions.SetActive(false);
             Destroy(gameObject);
